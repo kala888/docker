@@ -1,0 +1,1 @@
+docker stop $(docker ps|grep hours| awk '{print $1}')
