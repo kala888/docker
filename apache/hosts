@@ -1,0 +1,66 @@
+127.0.0.1	localhost	localhost.localdomain
+127.0.0.1	E440
+127.0.0.1       agcn1-laptop04
+127.0.0.1       agcn1-laptop04.aaxischina.net
+172.17.3.91	www.kalaindocker.com
+
+127.0.0.1	localdev.ferguson.com
+127.0.0.1	www.localdev.ferguson.com
+127.0.0.1	m.localdev.ferguson.com
+127.0.0.1	aaxis.contentserver.com
+127.0.0.1	acrsus.aaxisaws.com
+127.0.0.1	acrscn.aaxisaws.com
+127.0.0.1	acrsus-beta.aaxisaws.com
+127.0.0.1	acrscn-beta.aaxisaws.com
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+
+
+74.201.58.53	uat-static.zenni.com
+74.201.58.53	uat.zenni.com
+
+10.10.103.111 	ec2pf.ferguson.com
+10.10.103.111 	www.ec2pf.ferguson.com
+10.10.103.111 	m.ec2pf.ferguson.com
+10.10.103.111 	mdex.ec2pf.ferguson.com
+10.10.103.102 	www.ec2dev.ferguson.com
+10.10.103.102 	m.ec2dev.ferguson.com
+
+10.10.103.108 	www.ec2dev2.ferguson.com
+10.10.103.108 	m.ec2dev2.ferguson.com
+
+#10.10.103.113 m.fgdev.ferguson.com
+#10.10.103.113 www.fgdev.ferguson.com
+#10.10.103.113 m.fgtest.ferguson.com
+#10.10.103.113 www.fgtest.ferguson.com
+#10.10.103.113 m.fgqa.ferguson.com
+#10.10.103.113 www.fgqa.ferguson.com
+
+172.17.3.5  www.testqa.aaxisaws.com
+172.17.3.5  www.testdev.aaxisaws.com
+
+10.10.103.113 fgdevstore
+10.10.103.113 fgteststore
+10.10.103.113 fgtestutil
+10.10.103.108 leww1.shop.ferguson.com
+
+10.10.110.102 dev-101.toshiba.com  dev.tais.workbench dev-static-101.toshiba.com
+10.10.103.108 qualitycenter.sys.ds.wolseley.com
+
+10.10.103.113 fgdevstore
+10.10.103.113 fgteststore
+10.10.103.113 fgtestutil
+10.10.103.113 fgtestacmc
+10.10.103.113 testsplunk 
+10.10.103.113 fgtestendeca
+
+
+10.10.103.113  ACMC
+172.17.103.121	search.philipzhang.com
+172.17.103.91    fakehosts docker.aaxisaws.com
