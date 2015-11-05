@@ -3,6 +3,7 @@ mkdir /softwares
 yum install -y tar wget curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-ExtUtils-MakeMaker gcc 
 yum -y clean all
 
+#https://www.kernel.org/pub/software/scm/git/
 cd /softwares
 url="$DOWNLOAD_SERVER/docker/apps/git/git-2.0.5.tar.gz"
 echo "start downloading ${url}"

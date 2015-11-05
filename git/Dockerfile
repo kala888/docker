@@ -1,6 +1,6 @@
 FROM centos:centos6
 MAINTAINER Kala Liu (email:kalaliu@aaxischina.com)
-ENV REFRESHED_AT 09/25/2015
+ENV REFRESHED_AT 11/1/2015 11:11
 
 ENV DOWNLOAD_SERVER http://docker.aaxisaws.com
 
