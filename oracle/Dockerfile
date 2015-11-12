@@ -10,7 +10,7 @@ ADD ./install.sh /install.sh
 RUN chmod 755 /install.sh && sh /install.sh
 
 #Change TimeZone
-RUN export TZ=Asia/Shanghai" >> /home/oracle/.bash_profile
+RUN export "TZ=Asia/Shanghai" >> /home/oracle/.bash_profile
 
 #Add the startup shell
 ADD /startuporacle.sh /startuporacle.sh

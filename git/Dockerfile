@@ -1,4 +1,4 @@
-FROM centos:centos6
+FROM centos/basic
 MAINTAINER Kala Liu (email:kalaliu@aaxischina.com)
 ENV REFRESHED_AT 11/1/2015 11:11
 
