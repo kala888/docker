@@ -57,7 +57,7 @@ echo "export PATH=/opt/oracleclient/instantclient_11_2:\$PATH" >> /home/docker/.
 unzip -q /softwares/atg11.1.zip -d /opt/ATG/
 echo "ATGJRE=/opt/java/jdk/bin/java;export ATGJRE" > /opt/ATG/ATG11.1/home/localconfig/dasEnv.sh
 echo "JBOSS_HOME=/opt/jboss/jboss-eap-6.1;export JBOSS_HOME" >> /opt/ATG/ATG11.1/home/localconfig/dasEnv.sh 
-echo "JBOSS_VERSION=5.1.0.GA;export JBOSS_VERSION" >> /opt/ATG/ATG11.1/home/localconfig/dasEnv.sh
+echo "JBOSS_VERSION=6.1.0;export JBOSS_VERSION" >> /opt/ATG/ATG11.1/home/localconfig/dasEnv.sh
 
 echo "export DYNAMO_ROOT=/opt/ATG/ATG11.1" >> /home/docker/.bash_profile
 echo "export DYNAMO_HOME=/opt/ATG/ATG11.1/home" >> /home/docker/.bash_profile
