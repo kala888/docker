@@ -5,7 +5,7 @@ cd /softwares
 
 #Download softwares form docker server
 #https://launchpad.net/imagemagick/main
-for plugin in ImageMagic/ImageMagick-6.9.2-4.zip  ;\
+for plugin in ImageMagick/ImageMagick-6.9.2-4.zip  ;\
  do 
  	url=$DOWNLOAD_SERVER/docker/apps/${plugin}
  	echo "start downloading ${url}"
