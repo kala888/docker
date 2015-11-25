@@ -10,11 +10,8 @@ RUN chmod 755 /install.sh && sh /install.sh
 
 #Install Handlers
 RUN mkdir -p /etc/httpd/Apache
-RUN curl -so /etc/httpd/Apache/ImageResizeHandler.pm  $DOWNLOAD_SERVER/docker/apps/ImageMagic/ImageResizeHandler.pm 
-RUN curl -so /etc/httpd/Apache/ProductImageListHandler.pm  $DOWNLOAD_SERVER/docker/apps/ImageMagic/ProductImageListHandler.pm 
-
-#Add the supervisord.conf
-ADD supervisord.conf /etc/supervisord.conf
+RUN curl -so /etc/httpd/Apache/ImageResizeHandler.pm  $DOWNLOAD_SERVER/docker/apps/ImageMagick/ImageResizeHandler.pm 
+RUN curl -so /etc/httpd/Apache/ProductImageListHandler.pm  $DOWNLOAD_SERVER/docker/apps/ImageMagick/ProductImageListHandler.pm 
 
 #Set the work directory
 WORKDIR /
@@ -22,6 +19,3 @@ WORKDIR /
 #Export Ports
 EXPOSE 22 80
 
-#Make it executable
-ENTRYPOINT ["/usr/bin/supervisord"]
-CMD ["-n"]
