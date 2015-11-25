@@ -51,6 +51,7 @@ chmod -R 755 /opt/oracleclient
 
 echo "export ORACLE_HOME=/opt/oracleclient/instantclient_11_2" >> /home/docker/.bash_profile 
 echo "export LD_LIBRARY_PATH=/opt/oracleclient/instantclient_11_2" >> /home/docker/.bash_profile 
+echo "export TNS_ADMIN=/opt/oracleclient/instantclient_11_2" >> /home/docker/.bash_profile 
 echo "export PATH=/opt/oracleclient/instantclient_11_2:\$PATH" >> /home/docker/.bash_profile 
 
 #Install ATG

@@ -8,13 +8,18 @@ for plugin in java/jdk1.6.0_34.zip \
               ant/apache-ant-1.7.1.zip \
               supervisord/install_supervisord.sh \
               endeca/docker_endeca_312.zip; \
- do url=$DOWNLOAD_SERVER/docker/apps/${plugin} && echo "start downloading ${url}" && wget -q $url ; done
+ do url=$DOWNLOAD_SERVER/docker/apps/${plugin}
+    echo "start downloading ${url}"
+    wget -q $url
+	ls -l 
+ done
 
 chmod -R 755 /softwares
 
 #Install JAVA
 mkdir /opt/java
 unzip -q /softwares/jdk1.6.0_34.zip -d /opt/java 
+chown -R docker:docker /opt/java
 chmod -R 755 /opt/java
 ln -s /opt/java/jdk1.6.0_34 /opt/java/jdk
 
@@ -24,6 +29,7 @@ echo "export PATH=/opt/java/jdk/bin:\$PATH" >> /home/docker/.bash_profile
 #Install ANT
 mkdir /opt/ant
 unzip -q /softwares/apache-ant-1.7.1.zip -d /opt/ant
+chown -R docker:docker /opt/ant
 chmod -R 755 /opt/ant
 
 echo "export ANT_HOME=/opt/ant/apache-ant-1.7.1" >> /home/docker/.bash_profile 

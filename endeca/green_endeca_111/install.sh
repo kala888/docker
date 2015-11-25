@@ -83,7 +83,7 @@ source /home/docker/.bash_profile
 /softwares/OCcas11.1.0-Linux64.sh --silent --target /opt < /softwares/cas-silent.txt
 
 #Create the app folder
-mkdir /opt/endeca/apps
+#mkdir /opt/endeca/apps
 #chown -R docker:docker /opt/endeca
 chmod -R 755 /opt/endeca
 
