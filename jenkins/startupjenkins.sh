@@ -1,0 +1,1 @@
+java -Djava.awt.headless=true -DJENKINS_HOME=/opt/jenkins/home -jar /opt/jenkins/jenkins.war --logfile=/opt/jenkins/log/jenkins.log --webroot=/opt/jenkins/war --httpPort=18080 --ajp13Port=18009 --debug=5 --handlerCountMax=100 --handlerCountMaxIdle=20 >/dev/null &
