@@ -25,4 +25,4 @@ RUN mkdir /app
 WORKDIR /app
 
 # Set Default Behavior
-CMD ["grails","run-app"]
+CMD ["grails"]
