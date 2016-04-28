@@ -1,0 +1,38 @@
+sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup
+sudo vi /etc/apt/sources.list
+
+deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+sudo apt-get update
+sudo apt-get -y install openssh-server vim bridge-util iptables-persistent
+curl -sSL https://get.daocloud.io/docker | sh
+
+sudo usermod -aG docker demo
+
+sudo vi /etc/default/docker
+	DOCKER_OPTS="--dns 172.17.255.20   --dns 8.8.8.8 --ip-forward=true --iptables=false --bip=192.168.0.1/24"
+
+sudo vi /etc/default/grub
+	GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
+
+sudo update-grub
+sudo restart docker
+sudo iptables -t nat -F
+sudo iptables -t nat -A POSTROUTING -s 192.168.0.1/24 -j MASQUERADE
+sudo /etc/init.d/iptables-persistent save
+
+vi /etc/hosts
+	172.17.3.91 docker.aaxisaws.com 
+
+git config core.filemode false
+git config --global core.autocrlf false
+git config --system core.longpaths true
