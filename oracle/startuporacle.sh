@@ -7,7 +7,11 @@ rm -rf /fakehosts && cp /etc/hosts /fakehosts \
 && sed -i '/127\.0\.0\.1 fakehost/d' /fakehosts && echo "127.0.0.1 fakehost `hostname`" >>/fakehosts \
 && cat /fakehosts >/etc/hosts
 
-echo -n $"Starting Oracle Database:"
-su - oracle  -c "/opt/oracle/11gR2/bin/lsnrctl start"
-su - oracle -c "/opt/oracle/11gR2/bin/dbstart $ORACLE_HOME" 
-su - oracle -c "[ -f /oracle_setting.sql ] && sqlplus / as sysdba /oracle_setting.sql && rm -rf /oracle_setting.sql " 
+source /root/.bash_profile
+
+echo "Starting Oracle Database:"
+/opt/oracle/11gR2/bin/dbstart $ORACLE_HOME
+# DON't Add any more scripts after start oracle, it will be cause a retry issue.
+[ -f /oracle_setting.sql ] && sqlplus / as sysdba @/oracle_setting.sql && rm -rf /oracle_setting.sql
+
+

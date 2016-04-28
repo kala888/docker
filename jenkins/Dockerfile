@@ -1,6 +1,6 @@
-FROM centos/git
+FROM centos/basic
 MAINTAINER Kala Liu (email:kalaliu@aaxischina.com)
-ENV REFRESHED_AT 12/7/2015 14:54
+ENV REFRESHED_AT 1/22/2016 23:52
 
 ENV DOWNLOAD_SERVER http://docker.aaxisaws.com
 ENV JENKINS_MIRROR http://mirrors.jenkins-ci.org
@@ -11,7 +11,9 @@ ENV JENKINS_MIRROR http://mirrors.jenkins-ci.org
 ADD ./install.sh /install.sh
 RUN chmod 755 /install.sh && sh /install.sh
 
-ADD startupjenkins.sh /startupjenkins.sh
+ADD ./jenkins /etc/init.d/
+RUN chkconfig --add jenkins
+RUN chkconfig jenkins on
 
 #Add the supervisord.conf
 ADD supervisord.conf /etc/supervisord.conf

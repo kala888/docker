@@ -1,6 +1,6 @@
 FROM centos/basic
 MAINTAINER Kala Liu(email:kalaliu@aaxischina.com)
-ENV REFRESHED_AT 11/25/2015 11:50
+ENV REFRESHED_AT 1/22/2016 18:33
 
 ENV DOWNLOAD_SERVER http://172.17.3.91
 

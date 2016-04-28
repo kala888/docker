@@ -1,14 +1,18 @@
-FROM centos:centos6
+FROM centos:centos6.7
 MAINTAINER Kala Liu(email:kalaliu@aaxischina.com)
-ENV REFRESHED_AT 10/13/2015 14:50
+ENV REFRESHED_AT 1/22/2016 14:50
+
+#Do update 
+RUN yum -y update &&  yum -y clean all
+
+#Install the needed softwares
+RUN yum -y install passwd ping glibc.i686 tar wget unzip python-setuptools dos2unix openssh-server telnet which sudo libaio* \
+    && yum -y clean all
+	
 
 #Change the root password
 RUN echo -e "123abcABC\n123abcABC" | passwd root
 
-#Install the needed softwares
-RUN yum -y install glibc.i686 tar wget unzip python-setuptools dos2unix openssh-server telnet which sudo libaio* \
-    && yum -y clean all
-	
 #Set the ssh connection
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key \
     && sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config \

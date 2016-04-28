@@ -29,7 +29,10 @@ mkdir -p $JENKINS_HOME/../log
 mv /softwares/jenkins.war /opt/jenkins/jenkins.war
 
 for plugin in chucknorris greenballs scm-api git-client git ws-cleanup ansicolor publish-over-ssh active-directory;\
-    do wget -q -O $JENKINS_HOME/plugins/${plugin}.hpi $JENKINS_MIRROR/plugins/${plugin}/latest/${plugin}.hpi ; done
+    do
+	echo "install plugin $plugin"
+	wget -q -O $JENKINS_HOME/plugins/${plugin}.hpi $JENKINS_MIRROR/plugins/${plugin}/latest/${plugin}.hpi ; 
+done
 
 #Install supervisord
 sh /softwares/install_supervisord.sh

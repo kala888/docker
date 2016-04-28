@@ -1,6 +1,6 @@
 FROM apache
 MAINTAINER Kala Liu(email:kalaliu@aaxischina.com)
-ENV REFRESHED_AT 11/25/2015 15:44
+ENV REFRESHED_AT 1/22/2015 23:44
 
 ENV DOWNLOAD_SERVER http://docker.aaxisaws.com
 

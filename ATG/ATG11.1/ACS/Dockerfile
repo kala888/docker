@@ -1,6 +1,6 @@
 FROM atg/111
 MAINTAINER Kala Liu(email:kalaliu@aaxischina.com)
-ENV REFRESHED_AT 10/21/2015
+ENV REFRESHED_AT 1/22/2016 18:53
 
 ENV DOWNLOAD_SERVER http://docker.aaxisaws.com
 
@@ -22,10 +22,6 @@ RUN source /home/docker/.bash_profile && npm install -g bower
 
 #Install gulp
 RUN source /home/docker/.bash_profile && npm install -g gulp
-
-#Install a aliasthehost
-RUN [ ! -e /opt/tools/ ] && mkdir -p /opt/tools/
-RUN curl -o /opt/tools/aliasthehost.sh $DOWNLOAD_SERVER/docker/apps/tools/aliasthehost.sh
 
 #EXPOSE Ports
 EXPOSE 22 8080 8180 8280 8380 8787 8009
