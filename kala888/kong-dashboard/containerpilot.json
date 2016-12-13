@@ -1,0 +1,12 @@
+{
+  "consul": "consul:8500",
+  "services": [
+    {
+      "name": "kong-dashboard",
+      "port": 8080,
+      "health": "/usr/bin/curl -o /dev/null -s http://localhost:8080/",
+      "poll": 3,
+      "ttl": 10
+    }
+  ]
+}

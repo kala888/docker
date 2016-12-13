@@ -1,1 +1,0 @@
-docker run -d -p 80:80 -v ~/docker/pythonmagick/httpd.conf:/etc/httpd/conf/httpd.conf -v ~/docker/pythonmagick/pythonhandler/:/etc/httpd/pythonhandler -v ~/docker/pythonmagick/images/:/var/www/html/images/ --name test image-resize2

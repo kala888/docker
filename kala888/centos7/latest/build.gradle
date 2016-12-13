@@ -1,0 +1,31 @@
+//configuration of dockerfile
+Dockerfile{
+	filepath = ""
+	org = ""
+	componentName = ""
+	componentVersion = ""
+	dockerImageVersion = "latest"
+	dependOnStr = ""
+	dependOn = ""
+	dependOnVersion = "latest"
+	childImage=[]
+}
+
+//configuration of DependencesAnalytics
+DependencesAnalytics{
+	//orgHomePath must make configuration 
+	orgHomePath = "C:/Users/adompang/Desktop/gradle-docker20160515/gradle-docker20160513/docker/aaxiscommerce"
+	roots=[:]
+	allDockerfiles=[:]
+}
+
+//configuration of commen 
+DockerConfiguration {
+	dockerConfigurationEntity = [
+								 "dockerfileName":"Dockerfile",
+								 "registryURL":"registry.aaxisaws.com",
+								 "dockerEmail":"kalaliu@aaxiscommerce.com",
+								 "username":"admin",
+								 "password":"admin123"
+								]
+}
